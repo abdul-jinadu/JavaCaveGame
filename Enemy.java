@@ -26,7 +26,11 @@ public class Enemy extends Character {
     }
 
     // Returns attack damage
+    // Modified for Assignment 5 to give 20% chance for critical hit
     public int attack() {
+        if (Math.random() < 0.20){
+            return attackDamage * 2;
+        }
         return attackDamage;
     }
 
