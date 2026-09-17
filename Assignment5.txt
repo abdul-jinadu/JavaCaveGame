@@ -1,0 +1,23 @@
+//* What I Learned
+* The feature in Java that I learned about while looking through this code was the concept of inheritance. 
+* It allows one class to use stuff from another class instead of rewriting the code again.
+* In the game, the Charcter class is an abstract base class while bother the Player and Enemy classes are built from it.
+* This means that players and enemies can share behaviors define in Charcter.
+* This entire project uses it to organize different types of charcters in game, while allowing them to de distinct as well.
+* I think inheritance is useful because it makes the code easier to organize and reduces the amount of repeated code used in the program making it more labor and time efficent.
+* Learning about this method helped me understand how connectedd different classes are in the game to one another.
+* https://docs.oracle.com/javase/tutorial/java/IandI/subclasses.html
+* https://docs.oracle.com/javase/tutorial/java/IandI/super.html
+*//
+
+
+//* Program Modification
+* For the modification, I just decided to add a critical hit chance to the goblins.
+* I told Chatgpt to give me some options on what would be good to modify and chose this.
+* I proceeded to change the attack() method in the Enemy file so that the goblin has a 20% chance of dealing twice as much damage.
+* This change makes combat more unpredictable and gives the enemies another mechanic in game.
+* The original attack() just returned the goblin's attackDamage, so I had to first look and understand how that method was being used in Main.java prior to making my modification.
+* Main just called the goblin.attack() during the enemy's turn and uses the number as damage dealt to player. 
+* I really only needed to modify Enemy because the game already uses whatever value returned by attack().
+* I'd say a challenge was understanding how Math.random() could be implemented to create that 20% for the critical hit.
+*//
